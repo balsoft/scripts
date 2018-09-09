@@ -5,6 +5,7 @@
         name = "zshrc-extra.sh";
         src = ./zshrc.sh;
         buildInputs = with pkgs; [ libnotify xorg.xprop ];
+        unpackPhase = "";
         installPhase = "cp $src $out";
     });
 }

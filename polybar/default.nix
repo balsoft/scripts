@@ -9,6 +9,7 @@
         units = "metric";
         symbol = "°";
         inherit theme;
+        unpackPhase = "":
         installPhase = ''
             mkdir -p $out/bin $out/etc
             cp $src $out/bin
