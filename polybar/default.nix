@@ -72,14 +72,14 @@ rec {
             content=( "$weather" "$now" "$next" "$email" )
             for index in `seq 0 3`
             do
-                text[index]="`echo $${content[index]}|head -1`"
-                color[index]="`echo $${content[index]}|tail -1`"
+                text[index]="`echo ''${content[index]}|head -1`"
+                color[index]="`echo ''${content[index]}|tail -1`"
             done
             text[4]=""
             color[4]="${theme.bg}"
             for index in `seq 0 3`
             do
-                echo -n "%{B$${color[index]}$${text[index]}%{B$${color[$((index+1))}}%{F$${color[index]}}%{T4} %{T-}"
+                echo -n "%{B''${color[index]}''${text[index]}%{B''${color[$((index+1))}}%{F''${color[index]}}%{T4} %{T-}"
             done'';
         executable = true;
     };
