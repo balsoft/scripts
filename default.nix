@@ -6,5 +6,5 @@
         src = ./zshrc.sh;
         buildInputs = with pkgs; [ libnotify xorg.xprop ];
         installPhase = "cp $src $out";
-    };)
+    });
 }
